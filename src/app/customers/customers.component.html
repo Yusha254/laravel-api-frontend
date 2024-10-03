@@ -1,0 +1,6 @@
+<!-- src/app/customers/customers.component.html -->
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="!errorMessage && customers.length === 0">No customers found.</div>
+<ul *ngIf="!errorMessage">
+  <li *ngFor="let customer of customers">{{ customer.name }}</li> <!-- Adjust the property as needed -->
+</ul>
